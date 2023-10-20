@@ -1,0 +1,13 @@
+@mixin button() {
+    width: 125px;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rebeccapurple;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    
+}

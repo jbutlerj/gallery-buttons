@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+html, body {
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+}
+header .logo {
+  height: 100%;
+}
+header .logo img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-left: 15px;
+}
+header .navHolder {
+  width: 500px;
+  height: 100%;
+}
+header .navHolder .bars {
+  position: fixed;
+  top: 19px;
+  right: 20px;
+  display: none;
+}
+header .navHolder .bars .bar {
+  display: block;
+  width: 25px;
+  margin: 5px 0;
+  background-color: black;
+  height: 3px;
+  border-radius: 5px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+header .navHolder .bars.active .bar:nth-child(2) {
+  opacity: 0;
+}
+header .navHolder .bars.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(-225deg);
+          transform: translateY(8px) rotate(-225deg);
+}
+header .navHolder .bars.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(225deg);
+          transform: translateY(-8px) rotate(225deg);
+}
+header .navHolder .links {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  color: #000;
+  height: 60px;
+  width: 500px;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+header .navHolder .links a {
+  text-decoration: none;
+  color: #000;
+}
+header .navHolder .links.active {
+  height: 300px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 960px) {
+  header .navHolder .bars {
+    display: block;
+  }
+  header .navHolder .links {
+    right: 0;
+    top: 60px;
+    height: 0;
+    width: 200px;
+    opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+.hero {
+  width: 100%;
+  height: 300px;
+  background-image: url(../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 60px 0 40px 0;
+}
+
+footer {
+  height: 60px;
+  width: 100%;
+  background-color: #000;
+}
+
+.home {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.home h1 {
+  position: absolute;
+  top: 165px;
+  left: 10%;
+  z-index: 1;
+  text-transform: capitalize;
+  font-size: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: transparent;
+  font-family: sans-serif;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+}
+.home p {
+  font-size: 18px;
+  margin: 20px auto 16px auto;
+  width: 80%;
+}
+
+.browse {
+  width: 100%;
+}
+.browse h1 {
+  position: absolute;
+  top: 165px;
+  left: 10%;
+  z-index: 1;
+  text-transform: capitalize;
+  font-size: 200px;
+  margin: 0 auto;
+  text-align: center;
+  color: transparent;
+  font-family: sans-serif;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+}
+.browse .imageGrid {
+  width: 1110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto 40px auto;
+}
+.browse .imageGrid .container {
+  width: 350px;
+  height: 200px;
+  margin-bottom: 80px;
+}
+.browse .imageGrid .container .imageDescription {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+.browse .imageGrid .container .imageDescription .image {
+  width: 200px;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.browse .imageGrid .container .imageDescription .image .button {
+  width: 125px;
+  height: 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: rebeccapurple;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: sans-serif;
+}
+.browse .imageGrid .container .imageDescription .image .view {
+  display: none;
+}
+.browse .imageGrid .container .imageDescription .image:hover .view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.browse .imageGrid .container .imageDescription .image.one {
+  background-image: url(../images/thumb1_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.two {
+  background-image: url(../images/thumb2_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.three {
+  background-image: url(../images/thumb3_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.four {
+  background-image: url(../images/thumb4_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.five {
+  background-image: url(../images/thumb5_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.six {
+  background-image: url(../images/thumb6_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.seven {
+  background-image: url(../images/thumb7_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.eight {
+  background-image: url(../images/thumb8_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.nine {
+  background-image: url(../images/thumb9_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .image.ten {
+  background-image: url(../images/thumb10_200x200.jpg);
+}
+.browse .imageGrid .container .imageDescription .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  width: 150px;
+  height: 100%;
+  font-size: 20px;
+  background-color: lightgrey;
+  border-radius: 20px;
+}
+.browse .imageGrid .container .buttonHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.browse .imageGrid .container .buttonHolder .button {
+  width: 125px;
+  height: 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: rebeccapurple;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 1150px) {
+  .browse .imageGrid {
+    width: 730px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .browse .imageGrid .container .imageDescription .image .view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
